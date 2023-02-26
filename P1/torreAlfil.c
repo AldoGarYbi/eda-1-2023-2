@@ -63,17 +63,42 @@ void posicion(int eleccion){
 
     if(eleccion == 1){
         
-        int cont = 0;
+        int contx = 0;
+        int conty = 0;
 
         for(int i = 0; i < 8; i++){
 
             for(int j = 0; j < 8; j++){
 
                 if(i == x-1){
+                    
+                    if(i+contx >= 0 && i+contx<8 && j+y-1 < 8 && j+y-1 >= 0){
 
-                    tablero[i+cont][j+y-1] = 2;
-                    tablero[i-cont][j+y-1] = 2;
-                    cont++;
+                        tablero[i+contx][j+y-1] = 2;
+                        
+                    }
+
+                    if(j+y-1 < 8 && j+y-1 >= 0 && i-contx >= 0 && i-contx<8){
+
+                        tablero[i-contx][j+y-1]= 2;
+                        
+                    }
+
+                    if(i+contx >= 0 && i+contx<8 && j+y-1-conty >= 0 && j+y-1-conty < 8){
+
+                        tablero[i+contx][j+y-1-conty] = 2;
+
+                    }
+
+                    if(j+y-1-conty >= 0 && j+y-1-conty < 8 && i-contx >= 0 && i-contx<8){
+
+                        tablero[i-contx][j+y-1-conty]= 2;
+
+                    }
+
+
+                    contx++;
+                    conty += 2;
 
                 }
 
@@ -107,7 +132,7 @@ void posicion(int eleccion){
 
     }
 
-    tablero [x-1][y-1] = 1;
+    tablero[x-1][y-1] = 1;
 
     for(int i = 0; i < 8; i++){
 
@@ -134,18 +159,6 @@ void posicion(int eleccion){
                 printf("[X] ");
 
             }
-
-        }
-
-        printf("\n");
-
-    }
-
-    for(int i = 0; i < 8; i++){
-
-        for(int j = 0; j < 8; j++){
-
-            printf("%i ", tablero[i][j]);
 
         }
 
