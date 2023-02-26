@@ -108,7 +108,7 @@ void descifrarMensaje(){
 
     printf("El texto descifrado es:\n");
 
-    for(i=0; i = ren; i++){
+    for(i=0; i < ren; i++){
 
         for(j=0; j<col; j++){
 
