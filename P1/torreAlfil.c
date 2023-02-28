@@ -45,14 +45,14 @@ void posicion(int eleccion){
 
     while(condi == 0){
 
-        printf("\nSeleccione la posicion de la pieza, entre 0 y 8: ");
+        printf("\nSeleccione la posicion de la pieza, entre 1 y 8: ");
         printf("\nPara x: ");
         scanf("%i", &x);
         printf("\nPara y: ");
         scanf("%i", &y);
         printf("\n");
 
-        if(x <= 8 && x >= 0 && y <= 8 && y >= 0){
+        if(x <= 8 && x >= 1 && y <= 8 && y >= 1){
 
             int tablero[8][8];
 
