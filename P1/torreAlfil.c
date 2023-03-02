@@ -2,9 +2,11 @@
 
 void posicion (int eleccion);
 
-int main (){
+int ciclo = 1;
 
-    while (1){
+int main (){
+    
+    while (ciclo == 1){
 
         int elec;
 
@@ -173,6 +175,9 @@ void posicion(int eleccion){
                 condi = 1;
 
             }
+
+            printf("\nDesea volver a utilizar el programa, 1- Si , Cualquier otro numero - No: ");
+            scanf("%i", &ciclo);
 
         }else{
 
