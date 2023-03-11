@@ -4,7 +4,9 @@ void posicion(int seleccion);
 
 int main (){
 
-    while(1){
+    int cicl = 1;
+
+    while(cicl == 1){
 
         int selec;
 
@@ -19,12 +21,16 @@ int main (){
             case 1:
 
                 posicion(selec);
+                printf("\nSi desea volver a utilizar el programa digite 1, de lo contrario digite cualquier otro numero.\n");
+                scanf("%d",&cicl);
 
             break;
 
             case 2:
 
                 posicion(selec);
+                printf("\nSi desea volver a utilizar el programa digite 1, de lo contrario digite cualquier otro numero.\n");
+                scanf("%d",&cicl);
 
             break;
 
