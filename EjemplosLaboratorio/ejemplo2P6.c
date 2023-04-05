@@ -163,4 +163,15 @@ int main() {
 
   n = count(arr);
   printf("\nNumero total de elementos en una deque: %d\n", n);
+
+  addFront(arr, 11, &front, &rear);
+  addRear(arr, 23, &front, &rear);
+  addRear(arr, 15, &front, &rear);
+  addRear(arr, 91, &front, &rear);
+    
+
+  display(arr);
+
+    printf("\n");
+
 }

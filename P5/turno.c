@@ -178,7 +178,7 @@ int main(){
             if(isEmptyP(pila)){
 
                 printf("\nYa no quedan mas turnos.");
-                printf("\nUltimo elemento en el tope de la pila: %d", peek(pila));
+                printf("\nUltimo elemento en el tope de la pila: Ninguno");
                 printf("\nUltimo elemento formado en la cola: %d\n", rear(cola));
 
                 condi = 2;
@@ -194,7 +194,16 @@ int main(){
 
         }else if(opc == 2){
 
-            printf("\nUltimo elemento en el tope de la pila: %d", peek(pila));
+            if(isEmptyP(pila)){
+
+                printf("\nUltimo elemento en el tope de la pila: Ninguno");
+
+            }else{
+
+                printf("\nUltimo elemento en el tope de la pila: %d", peek(pila));
+
+            }
+
             printf("\nUltimo elemento formado en la cola: %d\n", rear(cola));
 
             condi = 2;
