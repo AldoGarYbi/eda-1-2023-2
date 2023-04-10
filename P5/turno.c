@@ -204,7 +204,15 @@ int main(){
 
             }
 
-            printf("\nUltimo elemento formado en la cola: %d\n", rear(cola));
+            if(isEmptyC(cola)){
+
+                printf("\nUltimo elemento formado en la cola: Ninguno\n");
+
+            }else{
+
+                printf("\nUltimo elemento formado en la cola: %d\n", rear(cola));
+
+            }
 
             condi = 2;
 
