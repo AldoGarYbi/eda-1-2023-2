@@ -190,8 +190,8 @@ int count(char *arr){
 
 int main(){
 
-    char arr[MAX], arru[MAX];
-    int front, rear, i, longitud;
+    char arr[MAX], arru[MAX],f,t;
+    int front, rear, i, longitud, b;  
 
     front = rear = -1;
 
@@ -217,6 +217,31 @@ int main(){
 
     }
 
-    display(arr);
+    for(i=0; i<longitud/2; i++){
+
+        f = delFront(arr,&front,&rear);
+        t = delRear(arr,&front,&rear);
+
+        if(f == t){
+
+            b = 1;
+
+        }else{
+
+            b = 0;
+
+        }
+
+    }
+
+    if(b == 1){
+
+        printf("\nLa palabra es un palindromo.\n");
+
+    }else if(b == 0){
+
+        printf("\nLa palabra no es un plaindromo.\n");
+
+    }
 
 }
