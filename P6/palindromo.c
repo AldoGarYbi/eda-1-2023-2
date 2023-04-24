@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 #define MAX 30
 
@@ -191,56 +192,70 @@ int count(char *arr){
 int main(){
 
     char arr[MAX], arru[MAX],f,t;
-    int front, rear, i, longitud, b;  
+    int front, rear, i, longitud, cont1 = 0, cont2 = 0, ciclo = 1, minuscula;  
 
-    front = rear = -1;
+    while(ciclo == 1){
 
-    printf("\nPrograma para verificar si una palabra es palindromo.\n");
-    printf("\nEscriba la palabara:  ");
-    scanf("%s", arru);
+        front = rear = -1;
+        
+        cont1 = 0; 
+        cont2 = 0;
 
-    printf("La palabra es: ");
+        printf("\nPrograma para verificar si una palabra es palindromo.\n");
+        printf("\nEscriba la palabara:  ");
+        scanf("%s", arru);
 
-    longitud = strlen(arru);
+        longitud = strlen(arru);
 
-    printf("%d", longitud);
+        for(i=0; i<MAX; i++){
 
-    for(i=0; i<MAX; i++){
-
-        arr[i] = '0';
-
-    }
-
-    for(i = 0; i<longitud; i++){
-
-        addRear(arr, arru[i], &front, &rear);
-
-    }
-
-    for(i=0; i<longitud/2; i++){
-
-        f = delFront(arr,&front,&rear);
-        t = delRear(arr,&front,&rear);
-
-        if(f == t){
-
-            b = 1;
-
-        }else{
-
-            b = 0;
+            arr[i] = '0';
 
         }
 
-    }
+        for(i = 0; i<longitud; i++){
 
-    if(b == 1){
+            minuscula = tolower(arru[i]);
+            addRear(arr, minuscula, &front, &rear);
 
-        printf("\nLa palabra es un palindromo.\n");
+        }
 
-    }else if(b == 0){
+        for(i=0; i<longitud/2; i++){
 
-        printf("\nLa palabra no es un plaindromo.\n");
+            f = delFront(arr,&front,&rear);
+            t = delRear(arr,&front,&rear);
+
+            if(f == t){
+
+                cont1++;
+
+            }else{
+
+                cont2++;
+
+            }
+
+        }
+
+        f = delFront(arr, &front, &rear);
+
+        if(cont2 > 0){
+
+            printf("\nLa palabra no es un plaindromo.\n");
+
+        }else if(cont1 == longitud/2){
+
+            printf("\nLa palabra es un palindromo.\n");
+
+        }
+
+        printf("\n¿Desea volver a utilizar el programa?\n");
+        printf("1- Si.\n");
+        printf("Otro numero- No\n");
+        scanf("%d", &ciclo);
+
+
+
 
     }
 
