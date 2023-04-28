@@ -134,7 +134,7 @@ char delFront(char *arr, int *pfront, int *prear){
 
 char delRear(char *arr, int *pfront, int *prear){
 
-    int objeto;
+    char objeto;
 
     if(*pfront == -1){
 
