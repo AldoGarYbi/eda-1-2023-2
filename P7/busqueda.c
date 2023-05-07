@@ -189,11 +189,11 @@ void search(struct Node* last, int key){
 
 if(s->data == key){
 
-  printf("\nEl elemento se encuentra en la posicion %d de la lista. (La primer posicion es la 0)\n",cont);
+  printf("\nEl elemento %d se encuentra en la posicion %d de la lista. (La primer posicion es la 0)\n", key ,cont);
 
 }else{
 
-  printf("\nEl elemento no se encuentra en la lista.\n");
+  printf("\nEl elemento %d no se encuentra en la lista.\n", key);
 
 }
   
@@ -227,7 +227,7 @@ int main() {
   printf("\n");
   traverse(last);
 
-  printf("\n Si desea volver a utilizar el programa digite 1, de lo contrario digite cualquier otro numero: ");
+  printf("\nSi desea volver a utilizar el programa digite 1, de lo contrario digite cualquier otro numero: ");
   scanf("%d", &ciclo);
 
   }
