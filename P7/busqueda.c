@@ -1,5 +1,3 @@
-// Codigo para implementar operaciones en una lista ligada circular
-
 #include <stdio.h>
 #include <stdlib.h>
 
