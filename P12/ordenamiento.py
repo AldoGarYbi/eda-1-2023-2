@@ -3,8 +3,8 @@ from mpl_toolkits.mplot3d import Axes3D
 import random
 
 times=0
-global times2
-global times3
+times2=0
+times3=0
 
 def insertionSort_graph(n_lista):
     global times
@@ -52,7 +52,7 @@ def merge_graph(arr1, arr2):
 
 def merge_sort(arr):
     
-    times2 = 0
+    global times2
     
     times2+=1
     
