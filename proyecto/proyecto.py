@@ -127,9 +127,9 @@ def charge_products():
 
     if elec == '1':
 
-        condition = 1
+        condition = '1'
 
-        while condition != 0:
+        while condition != '0':
 
             code = input("Digite el código del suministro que desea comprar: ")
 
@@ -141,11 +141,12 @@ def charge_products():
                     print("Nombre del suministro: "+ inventory[x][1])
                     print("Precio del suministro: $" + inventory[x][2])
 
-                    addition = int(inventory[x][2]) + addition
+                    addition = float(inventory[x][2]) + addition
+                    round(addition, 2)
 
                     cont+=1
 
-                    condition = int(input("Para dejar de comprar digite 0, caso contrario digite cualquier otro número: "))
+                    condition = input("Para dejar de comprar digite 0, caso contrario digite cualquier otro caracter: ")
                 
             if cont == 0:
                 print("No se encontro el suministro con el código dado, por favor digite un nuevo codigo.")
@@ -169,9 +170,9 @@ def charge_products():
     
     elif elec == '2':
 
-        condition = 1
+        condition = '1'
 
-        while condition != 0:
+        while condition != '0':
 
             name = input("Escriba el nombre del suministro que desea comprar: ")
 
@@ -183,11 +184,12 @@ def charge_products():
                     print("Nombre del suministro: "+ inventory[x][1])
                     print("Precio del suministro: $" + inventory[x][2])
 
-                    addition = int(inventory[x][2]) + addition
+                    addition = float(inventory[x][2]) + addition
+                    round(addition, 2)
 
                     cont+=1
 
-                    condition = int(input("Para dejar de comprar digite 0, caso contrario digite cualquier otro número: "))
+                    condition = input("Para dejar de comprar digite 0, caso contrario digite cualquier otro caracter: ")
                 
             if cont == 0:
                 print("No se encontro el suministro con el nombre dado, por favor digite un nuevo nombre.")
