@@ -253,7 +253,7 @@ int main() {
 
       list = addAfter(list, valor, key);
 
-      printf("\nLa lista actual es: ");>
+      printf("\nLa lista actual es: ");
       printf("\n");
       traverse(list);
 
